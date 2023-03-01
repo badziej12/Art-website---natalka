@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+body {
+    background-color: #0D0B23;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 3%;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+nav img {
+    height: 5vh;
+    /* width: 51px; */
+    align-self: center;
+}
+
+nav ul {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    justify-content: flex-end;
+}
+
+nav ul div {
+    display: flex;
+    flex-basis: 98%;
+    max-width: 600px;
+}
+
+nav ul li {
+    box-sizing: content-box;
+    list-style: none;
+    margin: 0 2%;
+    text-align: center;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+nav ul li:hover a {
+    color: #F19AFF;
+}
+
+nav ul li a {
+    font-weight: 400;
+    box-sizing: content-box;
+    color: #F5F5F5;
+    text-decoration: none;
+    transition: .2s;
+}
+
+footer {
+    /* position: fixed; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    /* background-color: black; */
+}
+
+footer .wrap {
+    display: flex;
+    max-width: 1400px;
+    flex-basis: 100%;
+}
+
+footer a {
+    color: #F5F5F5;
+    flex-basis: 33%;
+    flex-grow: 1;
+    text-decoration: none;
+    text-align: center;
+    transition: .2s;
+}
+
+footer a:hover {
+    color: #BBFF92;
+}
+
+main {
+    display: flex;
+    /* width: 100%; */
+    justify-content: center;
+    align-content: center;
+    /* align-items: center; */
+    flex-grow: 1;
+
+}
+
+section.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.painting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.painting:hover p {
+    color: #847BF2;
+}
+
+
+.painting img {
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    max-width: 350px;
+    max-height: 350px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.painting p {
+    margin-bottom: 10px;
+    color: #F5F5F5;
+    width: 80%;
+    max-width: 350px;
+    font-size: 0.8rem;
+    transition: .2s;
+}
+
+.img-popup {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-popup.active {
+    display: block;
+    opacity: 1;
+    backdrop-filter: blur(15px);
+}
+
+.image.active {
+    opacity: 1;
+}
+
+
+.image .bigsize {
+    width: 90vw;
+    max-width: 500px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}

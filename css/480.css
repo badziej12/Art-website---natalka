@@ -1,0 +1,24 @@
+@media screen and (min-width: 480px) {
+    section.gallery {
+        width: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .painting {
+
+        /* margin: 30px; */
+        width: auto;
+        flex-basis: 50%;
+    }
+
+
+
+
+
+    .painting img {
+        width: 80%;
+
+    }
+
+}
